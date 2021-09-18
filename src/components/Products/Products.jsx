@@ -4,8 +4,8 @@ import { Grid } from '@material-ui/core';
 import Product from './Product/Product';
 
 const products = [
-    { id: 1, name: 'Shoes', description: 'Trainers.', price: '£10' },
-    { id: 2, name: 'Laptop', description: 'Laptop.', price: '£100' }
+    { id: 1, name: 'Shoes', description: 'Trainers.', price: '£10', image: 'https://images.stockx.com/360/Air-Jordan-4-Retro-Black-Cat-2020/Images/Air-Jordan-4-Retro-Black-Cat-2020/Lv2/img02.jpg?auto=compress&w=480&q=90&dpr=2&updated_at=1606315877&h=320&fm=webp' },
+    { id: 2, name: 'Laptop', description: 'Laptop.', price: '£100', image: 'https://www.notebookcheck.net/uploads/tx_nbc2/air13teaser.jpg' }
 ];
 
 const Products = () => {
