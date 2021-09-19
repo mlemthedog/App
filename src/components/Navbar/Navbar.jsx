@@ -6,26 +6,28 @@ import logo from '../../assets/nike-shoes-vector.jpg';
 import useStyles from './styles';
 
 
-const Navbar = () => {
+const Navbar = ({ totalItems }) => {
     const classes = useStyles();
     return (
         <>
-            <AppBar position="fixed" className={classes.AppBar} color="inherit">
+            <AppBar position="fixed" className={classes.appBar} color="inherit">
                 <Toolbar>
                     <Typography variant="h6" className={classes.title} color="inherit">
-                        <img src={logo} alt="Commerce.js" height="25px" className={classes.image} />
+                        <img src={logo} alt="Commerce.js" height="50px" className={classes.image} />
                         Shoes
                     </Typography>
                     <div className={classes.grow} />
-                    <div className={classes.button}>
-                       <IconButton aria-label="Show cart items" color="inherit">
-                            <Badge badeContent={2} color="secondary"> </Badge>
-                                <ShoppingCart />
-                       </IconButton>
-                    </div>
-                       
+               
+                    <IconButton aria-label="Show cart items" color="inherit" >
+                    <ShoppingCart />
+                        <Badge badgeContent={totalItems} color="secondary" anchorOrigin={{ vertical: "top", horizontal: "right" }}> `
+                        <Typography>
+                              
+                        </Typography>
+                        </Badge>
+                        
+                    </IconButton>
                 </Toolbar>
-
             </AppBar>
         </>
     )
